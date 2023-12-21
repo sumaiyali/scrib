@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    text-align: center;
+    padding: 0;
+  }
+  
+  main {
+    display: flex;
+    justify-content: space-between;
+   
+    border: 3px solid black;
+    border-radius: 15px;
+   
+  }
+  
+  #leftDiv {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 15px;
+  }
+  
+  #rightDiv {
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 16px;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  nav{
+   
+
+  }
+  .title-manip{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  #link{
+    text-decoration: none;
+  }
+  a:visited {
+    color: #007bff; /* Set the color for visited links */
+  }
+  .home-flex{
+    display: flex;
+    justify-content: space-between;
+  }
+  h1{
+    display: flex;
+    justify-content: center;
+  }
+.buttons{
+
+  gap: 20px;
+  display: flex;
+  align-items: center;
+}
+#submit {
+  width: 50%;
+  background-color: #007bff;
+  color: rgb(214, 222, 229);
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 15px;
+  height: 50px;
+  transition: background-color 0.3s;
+}
+
+#submit:hover {
+  background-color:#0056b3; /* Change the color on hover */
+}
+a{
+  font-size: 20px;
+  text-decoration: none;
+}
+  

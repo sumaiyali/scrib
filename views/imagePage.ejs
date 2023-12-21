@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Uploading</title>
+</head>
+
+<body style="font-family: Arial, sans-serif; background-color: #f0f0f0; color: #333;">
+    <h1 style="text-align: center; color: #007bff;">Gallery</h1>    
+    <hr />
+    <div style="margin: 20px;">
+
+        <form action="/" method="POST" enctype="multipart/form-data" >
+            <div style="margin-bottom: 10px;  ">
+
+                <label for="name" style="font-weight: bold; position:absolute ;">Image Title</label>
+                <div style="display:flex; justify-content:flex-end; align-items: flex-start;">   
+       
+                    <a href="http://localhost:3003/" style="text-decoration:none;color: #007bff;">Logout</a>
+                </div>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Name"
+                    value=""
+                    name="name"
+                    required
+                    style="width: 100%; padding: 8px; box-sizing: border-box;"
+                />
+            </div>
+            <div style="margin-bottom: 10px;">
+                <label for="desc" style="font-weight: bold;">Image Description</label>
+                <textarea
+                    id="desc"
+                    name="desc"
+                    value=""
+                    rows="2"
+                    placeholder="Description"
+                    required
+                    style="width: 100%; padding: 8px; box-sizing: border-box;"
+                ></textarea>
+            </div>
+            <div >
+           
+            <div style="display:flex;justify-content: space-between;">
+                <div style="margin-bottom: 10px;">
+                <div style="margin-bottom:10px;">
+                        
+        
+                    <label for="image" style="font-weight: bold;">Upload Image</label>
+                    <input type="file" id="image" name="image" value="" required  style=""/>
+                </div>
+
+                <a href="http://localhost:3003/home" style="text-decoration: none;color: #007bff;">Go back to ScribbleBook</a>
+                </div>
+            <div style="">
+                <button type="submit" style="background-color: #007bff; color: #fff; padding: 10px; cursor: pointer; border-radius:15px; width: 300px; height: 50px; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#0056b3'" onmouseout="this.style.backgroundColor='#007bff'">Submit</button>
+
+
+            </div>
+            </div>
+        </div>
+           
+        </form>
+    </div>
+
+   
+    <hr />
+
+    <h1 style="text-align: center; color: #007bff;">Your Images</h1>
+    <div>
+        <% items.forEach(function(image) { %>
+        <div style="margin-bottom: 20px;">
+           
+          
+
+            <div style="display:flex; gap: 20px; ">
+                
+               
+                <img
+                    src="data:image/<%=image.img.contentType%>;base64,<%=image.img.data.toString('base64')%>"
+                    style="width: 30%; height: auto; min-width: 25%;"
+                />
+                
+                <div style=" font-size: 25px; background-color: whitesmoke;border-radius: 10px; min-width: 70%; ">
+                    <h5 style="background-color:rgb(143, 141, 141); color: rgb(21, 63, 100);" ><%= image.name %></h5>
+                    <p><%= image.desc %></p>
+                </div>
+                
+            </div>
+        </div>
+        <% }) %>
+    </div>
+</body>
+</html>
