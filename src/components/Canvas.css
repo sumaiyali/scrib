@@ -2,11 +2,13 @@
   display: flex;
   justify-content: space-around;
   margin-top: 10px;
+  background-color: white;
 }
 
 .btn-width {
   min-width: 50px;
   margin-right: 10px; /* Adjust the margin between buttons if needed */
+  background-color: white;
 }
 
 .canvas-btn {
@@ -18,7 +20,12 @@
   padding: 5px 5px;
   border-color: gray;
   border-width: thin;
+  background-color: white;
 }
+
+canvas {background-color: white;}
+body {background-image: url(C:\Users\sumai\OneDrive\Desktop\Scribble\src\components\background\home.jpg);}
+
 
 .mouse-state {
   cursor: none;
